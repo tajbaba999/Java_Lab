@@ -1,36 +1,20 @@
-import java.awt.*;
 import java.awt.event.*;
-
-import org.w3c.dom.Text;
-
-public class Adapterclass extends KeyAdapter {
-    private static final String text = null;
-    Label l;
-    TextArea area;
-    Frame f;
-
-    Adapterclass(){
-        f = new Frame("Key Adapter");
-        l = new Label();
-        l.setBounds(20, 50, 200, 20);
-        area = new TextArea();
-        area.setBounds(20, 80, 300,300);
-        f.add(l);
-        f.add(area);
-        f.setSize(400, 400);
-        f.setLayout(null);
-        f.setVisible(true);
-
-    }
-
-    public void keyReleased(KeyEvent e){
-        String str = area.getText();
-        String[] words = text.split("\\s");
-
-        l.setText("Words"+words.length+" Characters :"+text.length());
-    }
-    
-    public static void main(String[] args) {
-        new Adapterclass();
-    }
+import javax.swing.*;
+public class Adapterclass extends MouseAdapter {
+ JLabel label;
+ public static void main(String[] args) {
+ JFrame frame=new JFrame("Adapter Class Example");
+ JPanel panel=new JPanel();
+ JLabel label=new JLabel("Hello, World!");
+ panel.add(label);
+ frame.add(panel);
+ frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ frame.pack();
+ frame.setVisible(true);
+ Adapterclass example=new Adapterclass(label);
+ panel.addMouseListener(example);
+ }
+//  public Adapterclass(JLabel label){this.label=label;}
+ public void mouseEntered(MouseEvent e){label.setText("Wow,Mouse entered!!");}
+ public void mouseExited(MouseEvent e){label.setText("Oops,Mouse exited!!");}
 }
