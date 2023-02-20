@@ -1,15 +1,15 @@
 import java.applet.*;
 import java.awt.*;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
-import javax.swing.JPasswordField;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import javax.swing.*;
+// import javax.swing.ButtonGroup;
+// import javax.swing.JFrame;
+// import javax.swing.JLabel;
+// import javax.swing.JCheckBox;
+// import javax.swing.JRadioButton;
+// import javax.swing.JPasswordField;
+// import javax.swing.JScrollPane;
+// import javax.swing.JTextArea;
+// import javax.swing.JTextField;
 
 public class SwingWidgets extends JFrame{
     SwingWidgets(){
